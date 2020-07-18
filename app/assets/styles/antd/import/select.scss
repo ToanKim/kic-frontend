@@ -1,0 +1,25 @@
+// Import mixins
+@import 'assets/styles/mixins.scss';
+
+/////////////////////////////////////////////////////////////////////////////////////////
+/*  ANT DESIGN SELECT */
+
+.ant-select-selection {
+  border: 1px solid #e4e9f0;
+  .ant-select-selection__placeholder {
+    color: #dee1e6;
+  }
+}
+
+.ant-select-dropdown {
+  border: 1px solid $gray-light;
+  animation-duration: 0s !important;
+}
+
+.ant-select-auto-complete {
+  ol,
+  ul,
+  dl {
+    margin: 0;
+  }
+}

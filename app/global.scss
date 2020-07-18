@@ -1,0 +1,61 @@
+@import '~bootstrap-css-only/css/bootstrap.min.css';
+@import 'assets/styles/antd/antd.cleanui.scss';
+@import 'assets/styles/mixins.scss';
+
+html {
+  font-size: $base-font-size;
+}
+
+body {
+  font-size: 1rem;
+  line-height: 1.5;
+  font-family: $base-font-family;
+  color: $black;
+  overflow-x: hidden;
+  position: relative;
+
+  a {
+    text-decoration: none;
+    color: $black;
+    @include transition-color();
+    &:hover,
+    &:active,
+    &:focus {
+      color: $primary;
+      text-decoration: none;
+    }
+  }
+
+  input {
+    outline: none !important;
+    font-family: $base-font-family;
+    color: $black;
+  }
+
+  button,
+  input {
+    box-shadow: none !important;
+    outline: none !important;
+  }
+
+  input[type='text'],
+  input[type='password'],
+  input[type='email'],
+  textarea {
+    appearance: none !important;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: $black;
+  }
+
+  svg {
+    vertical-align: initial;
+    overflow: auto;
+  }
+}

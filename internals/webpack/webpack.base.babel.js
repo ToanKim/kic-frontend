@@ -42,6 +42,31 @@ module.exports = options => ({
         use: ['style-loader', 'css-loader'],
       },
       {
+        // Preprocess our own .scss files
+        test: /\.scss$/,
+        exclude: /node_modules/,
+        use: ['style-loader', 'css-loader', 'sass-loader'],
+      },
+      {
+        // Preprocess 3rd party .scss files located in node_modules
+        test: /\.scss$/,
+        include: /node_modules/,
+        use: ['style-loader', 'css-loader', 'sass-loader'],
+      },
+      {
+        // Preprocess our own .less files
+        // Use for antdesign
+        test: /\.less$/,
+        include: /node_modules/,
+        use: [
+          'style-loader',
+          'css-loader',
+          {
+            loader: 'less-loader',
+          },
+        ],
+      },
+      {
         test: /\.(eot|otf|ttf|woff|woff2)$/,
         use: 'file-loader',
       },
